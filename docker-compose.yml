@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.3"
 
 services:
   postgres:
@@ -8,6 +8,8 @@ services:
     ports:
       - 5432:5432
 
+  # we allow redis to run with a writable root file system here since this is only for local
+  # development testing and will not be deployed to a production environment
   redis:
     image: redis:alpine
 
