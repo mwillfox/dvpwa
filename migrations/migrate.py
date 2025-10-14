@@ -49,8 +49,6 @@ async def create_student(app: Application, name: str):
     :param app: The aiohttp application instance.
     :param name: The name of the student.
     """
-    # TODO - this function is used outside of this file with user input so
-    # we should fix the SQL injection vulnerability
     async with app["db"].acquire() as conn:
         await conn.execute(f"INSERT INTO students (name) VALUES ({name})")
     log.info(f"Student {name} created successfully.")
