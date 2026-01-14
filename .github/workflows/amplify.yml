@@ -22,4 +22,4 @@ jobs:
       - name: Amplify Runner
         uses: amplify-security/runner-action@develop
         with:
-          amplify-endpoint: https://gopher-comic-basilisk.ngrok-free.app
+          amplify-endpoint: https://amplify-local-mfox-public.ngrok.io
